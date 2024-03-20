@@ -7,6 +7,7 @@ from models.state import State
 from models.city import City
 from models.user import User
 from models.place import Place
+from models.review import Review
 
 from sqlalchemy.orm import sessionmaker
 
@@ -30,7 +31,7 @@ class DBStorage:
 
     def all(self, cls=None):
         """query database for provided class or all classes"""
-        all_classes = [State, City, User, Place]
+        all_classes = [State, City, User, Place, Review]
         obj_dict = {}
         if cls:
             result = self.__session.query(cls)
