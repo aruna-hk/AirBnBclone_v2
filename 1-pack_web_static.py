@@ -9,7 +9,7 @@ def do_pack():
     """ function to pack web pages for deployment"""
 
     now = datetime.utcnow().strftime("%Y%d%m%H%M%S")
-    file = "web_static_" + str(now)
+    file = "web_static_" + str(now) + ".tgz"
     print("Packing web_static to {}".format(file))
 
     if path.exists("versions") and path.isdir("versions"):
